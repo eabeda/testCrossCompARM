@@ -1,3 +1,4 @@
-bin_PROGRAMS=a.out
-a_out_SOURCES=testCrossCompARM.c
+
+bin_PROGRAMS=testCrossCompARM
+testCrossCompARM_SOURCES=testCrossCompARM.c
 
