@@ -10,8 +10,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <libLog.h>
 
-int main(void) {
+#define MODULE_NAME "testCrossCompARM"
+
+int main(void)
+{
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-	return EXIT_SUCCESS;
+    myLog_init(MODULE_NAME);
+    myLog(LOG_DEBUG, "*** %s ***", MODULE_NAME);
+	myLog_close();
+    return EXIT_SUCCESS;
 }
