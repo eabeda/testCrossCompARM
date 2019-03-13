@@ -57,21 +57,21 @@ $ qemu-arm ./src/testCrossCompARM
 ### Raspberry ###
 
 $ ldd ./testCrossCompARM
-	linux-vdso.so.1 (0x7ef5a000)
-	/usr/lib/arm-linux-gnueabihf/libarmmem.so (0x76f95000)
-	libLog.so.0 => not found
-	libc.so.6 => /lib/arm-linux-gnueabihf/libc.so.6 (0x76e41000)
-	/lib/ld-linux-armhf.so.3 (0x54b6c000)
+  linux-vdso.so.1 (0x7ef5a000)
+  /usr/lib/arm-linux-gnueabihf/libarmmem.so (0x76f95000)
+  libLog.so.0 => not found
+  libc.so.6 => /lib/arm-linux-gnueabihf/libc.so.6 (0x76e41000)
+  /lib/ld-linux-armhf.so.3 (0x54b6c000)
 
 $ export LD_LIBRARY_PATH=/tmp/lib/
 
 $ ldd ./testCrossCompARM
-	linux-vdso.so.1 (0x7efc7000)
-	/usr/lib/arm-linux-gnueabihf/libarmmem.so (0x76fbd000)
-	libLog.so.0 => /tmp/lib/libLog.so.0 (0x76fab000)
-	libc.so.6 => /lib/arm-linux-gnueabihf/libc.so.6 (0x76e57000)
-	libpthread.so.0 => /lib/arm-linux-gnueabihf/libpthread.so.0 (0x76e2f000)
-	/lib/ld-linux-armhf.so.3 (0x54b8c000)
+  linux-vdso.so.1 (0x7efc7000)
+  /usr/lib/arm-linux-gnueabihf/libarmmem.so (0x76fbd000)
+  libLog.so.0 => /tmp/lib/libLog.so.0 (0x76fab000)
+  libc.so.6 => /lib/arm-linux-gnueabihf/libc.so.6 (0x76e57000)
+  libpthread.so.0 => /lib/arm-linux-gnueabihf/libpthread.so.0 (0x76e2f000)
+  /lib/ld-linux-armhf.so.3 (0x54b8c000)
 
 $ file ./testCrossCompARM
 ./testCrossCompARM4: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 2.6.32, BuildID[sha1]=7174f0784b5dc430920e0028f67eb556341e8cd9, not stripped
